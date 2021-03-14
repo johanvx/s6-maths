@@ -4,40 +4,41 @@
   <meta charset="utf-8">
   <title>S6 Maths Manual</title>
   <link rel="stylesheet" href="index.css">
-  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+        crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+          integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+          integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body);"></script>
 </head>
+
 <body>
 <h1>Integration</h1>
+
 <div>
-  <p>
-    <span class="emph">Cadre</span>
-    \(I\) is a real interval and \(\mathring{I} \not= \emptyset\)
-  </p>
+  <p><span class="emph">Cadre</span>
+  \(I\) is a real interval and \(\mathring{I} \not= \emptyset\)</p>
 </div>
+
 <h2>Integration of positive functions</h2>
+
 <h3 class="section">I Definitions</h3>
-<div class="text">
-  <span class="emph">Definition</span>
+
+<div class="txt">
   <div class="box definition">
-    <p>
-      Let \(f\) be a positive function continuous almost everywhere on \(I\).
-      We say that "\(f\) is integrable on \(I\)" if:
-      \[
-        \exists M \in \mathbb{R}^+, \forall [a,b] \subset I, \int_{[a,b]} f \leqslant M.
-      \]
-      In this case, we call "integral of \(f\) on \(I\)" the number:
-      \[
-        \int_I f := \underset{[a,b] \subset I}{\sup} \int_{[a,b]} f.
-      \]
-    </p>
+    <p><span class="emph def">Definition</span>
+    Let \(f\) be a positive, continuous almost everywhere function on \(I\).
+    The function \(f\) is <span class="emph def">integrable on \(I\)</span> if:
+    \[\exists M \in \mathbb{R}^+, \forall [a,b] \subset I, \int_{[a,b]} f \leqslant M.\]
+    In this case, the number \[\int_I f := \underset{[a,b] \subset I}{\sup} \int_{[a,b]} f\]
+    is called <sapn class="emph def">integral of \(f\) on \(I\).</sapn></p>
   </div>
 </div>
-<div class="text">
+<div class="txt">
   <span class="emph">Remark</span>
   <table class="box">
     <tr>
@@ -58,114 +59,192 @@
     </tr>
   </table>
 </div>
-<div class="text">
+<div class="txt">
   <span class="emph">Remarks and Notations</span>
   <ul>
-    <li>We note \(S(I)\) the set containing all segments in \(I\).</li>
-    <li>
-      \(f\) is integrable on \(I\) if:
-      \[
-        \exists M \geqslant 0, \forall J \in S(I), \int_J f \leqslant M.
-      \]
-    </li>
-    <li>
-      Theoretically, it is necessary to distinguish
-      <div class="box">
-        <table class="list">
-          <tr>
-            <th>\[\int_0^{+\infty} f\]</th>
-          </tr>
-          <tr>
-            <td>convergence of the integral</td>
-          </tr>
-        </table>
-        and
-        <table class="list">
-          <tr>
-            <th>\[\int_0^{+\infty} f\]</th>
-          </tr>
-          <tr>
-            <td>integrability of \(f\)</td>
-          </tr>
-        </table>
-        <table class="list">
-          <tr>
-            <th>\[\sum_{n=0}^{+\infty} u_n\]</th>
-          </tr>
-            <tr>
-              <td>convergence of the series</td>
-            </tr>
-          </table>
-          and
-          <table class="list">
-            <tr>
-              <th>\[\int_0^{+\infty} f\]</th>
-            </tr>
-            <tr>
-              <td>summability (absolute convergence)</td>
-            </tr>
-          </table> 
-        </div>
-    </li>
-    <li>
-      If \(I = [\alpha,\beta]\) is a segment (\(\alpha \lt \beta\)),
-      then \(f\) is always integrable on \(I\) (because it's continuous almost everywhere) and
-      \[
-        \int_I f = \mathop{\underbrace{\int_\alpha^\beta f = \int_{[\alpha,\beta]} f}} \limits_{\textrm{cf. S4}}.
-      \]
-      <p>
-        Indeed,
-        <ul>
-          <li>
-            \(f\) is continuous almost everywhere on the segment \([\alpha,\beta\), so \(f\)
-            is bounded on \([\alpha,\beta]\).
-
-            \[
-              \forall J \in S(I), \int_J f \leqslant ||f||_{\infty, I} \cdot l(J)
-              \leqslant ||f||_{\infty, I} \cdot (\beta - \alpha).
-            \]
-
-            Therefore, \(f\) is integrable on \(I = [\alpha,\beta]\).
-          </li>
-          <li>
-            Let \(J \in S(I)\).
-
-            Since \(f \geqslant 0\),
-            \[
-              \int_J f \leqslant \int_{[\alpha,\beta]} f
-            \]
-
-            So \[\sup_{J \in S(I)} \int_J f \leqslant \int_{[\alpha,\beta]} f.\]
-          </li>
-          <li>
-            Finally, Since \(I = [\alpha,\beta] \in S(I)\),
-
-            \[
-              \int_{[\alpha,\beta]} f \leqslant \sup_{J \in S(I)} \int_J f.
-            \]
-          </li>
-        </ul>
-        In conclusion, \[\int_I f = \int_{[\alpha,\beta]} f\].
-      </p>
-    </li>
+    <li>The set consisting of all segments in \(I\) is written as \(S(I)\).</li>
+    <li>The function \(f\) is integrable on \(I\) if:
+    \[\exists M \geqslant 0, \forall J \in S(I), \int_J f \leqslant M.\]</li>
+    <li>Theoretically, it is necessary to distinguish
+    \[\begin{aligned}
+    \mathop{\int_0^{+\infty} f} \limits_{\textrm{convergence of the integral}}
+    & \textrm{and}
+    & \mathop{\int_0^{+\infty}f} \limits_{\textrm{integrability of }f} \\
+    \mathop{\sum_{n=0}^{+\infty} u_n} \limits_{\textrm{convergence of the series}}
+    & \textrm{and}
+    & \mathop{\sum_{n \in \mathbb{N}} u_n} \limits_{\textrm{summability (absolute convergence)}}
+    \end{aligned}\]</li>
+    <li>If \(I = [\alpha,\beta]\) is a segment (\(\alpha \lt \beta\)),
+    then \(f\) is always integrable on \(I\) (because it's continuous almost everywhere) and
+    \[\int_I f = \mathop{\underbrace{\int_\alpha^\beta f =
+    \int_{[\alpha,\beta]} f}} \limits_{\textrm{cf. S4}}.\]
+    <p>Indeed,
+      <ul>
+        <li>\(f\) is continuous almost everywhere on the segment \([\alpha,\beta]\), so \(f\)
+        is bounded on \([\alpha,\beta]\).
+        \[\forall J \in S(I), \int_J f \leqslant ||f||_{\infty, I} \cdot l(J)
+        \leqslant ||f||_{\infty, I} \cdot (\beta - \alpha).\]
+        Therefore, \(f\) is integrable on \(I = [\alpha,\beta]\).</li>
+        <li>Let \(J \in S(I)\). Since \(f \geqslant 0\),
+        \[\int_J f \leqslant \int_{[\alpha,\beta]} f\]
+        So \[\sup_{J \in S(I)} \int_J f \leqslant \int_{[\alpha,\beta]} f.\]</li>
+        <li>Finally, Since \(I = [\alpha,\beta] \in S(I)\),
+        \[\int_{[\alpha,\beta]} f \leqslant \sup_{J \in S(I)} \int_J f.\]</li>
+      </ul>
+    In conclusion, \[\int_I f = \int_{[\alpha,\beta]} f\].</p></li>
   </ul>
 </div>
-<div class="text">
+<div class="txt">
   <span class="emph">Examples</span>
   <ul>
-    <li>
-      \(\displaystyle \int_{(0,1]} \frac{\mathrm{d} x}{\sqrt{x}} = ?\)
-      <p>
-        The function \(x \mapsto \dfrac{1}{\sqrt{x}}\) is integrable on \((0,1]\).
-        <table class="box">
-          <th>
-            <td>Theoretical</td>
-            <td>Practical</td>
-          </th>
-        </table>
-      </p>
+    <li>\(\displaystyle \int_{(0,1]} \frac{\mathrm{d} x}{\sqrt{x}} = ?\)
+      <p>The function \(x \mapsto \dfrac{1}{\sqrt{x}}\) is integrable on \((0,1]\).</p>
+      <ul>
+        <li><spaan class="emph">Theoretically: </spaan>
+        Let \([a,b] \subset (0,1]\), we have
+        \[\begin{aligned}
+        \int_{[a,b]}\frac{\mathrm{d} x}{\sqrt{x}}
+        & = 2(\sqrt{b} - \sqrt{a}) \\
+        & \leqslant 2 \sqrt{b} \\ 
+        & \leqslant 2.
+        \end{aligned}\]
+        Therefore, \[\forall J \in S((0,1]), \int_J \frac{\mathrm{d} x}{\sqrt{x}} \leqslant 2.\]
+        So the function \(x \mapsto \dfrac{1}{\sqrt{x}}\) is integrable on \((0,1]\) and
+        \[\int_{(0,1]} \frac{\mathrm{d} x}{\sqrt{x}} \leqslant 2.\]
+        In addition, for \(n \in \mathbb{N}^*\), we have \([\dfrac{1}{n}, 1] \in S((0,1])\) and
+        \[\int_{[\frac{1}{n}, 1]} \frac{\mathrm{d} x}{x} \leqslant \int_{(0,1]} \frac{\mathrm{d} x}{x}.\]
+        i.e.
+        \[2 - \frac{2}{\sqrt{n}} \leqslant \int_{(0,1]} \frac{\mathrm{d} x}{x}.\]
+        Yet each term have a (finite) limit when \(n \to +\infty\), so
+        \[2 \leqslant \int_{(0,1]} \frac{\mathrm{d} x}{x}.\]</li>
+        <li><p><span class="emph">Practically: </span>
+        \[\int_a^1 \frac{\mathrm{d} x}{x} = \bigg[2 \sqrt{x}\bigg]
+        \bigg|_a^1 \mathop{\to} \limits_{a \to 0} 2.\]</p></li>
+      </ul>
     </li>
+
+    <p><span class="emph">Remark</span>
+    In this example, resolving the problem seems easy because we know a primitive of the function
+    \(x \to \dfrac{1}{\sqrt{x}}\) and the fundamental theorem of calculus.</p>
+    <p>In practice, it would never be the case!</p>
+
+    <li>The function \(x \mapsto \dfrac{e^{-x^2 \sin(x)}}{\sqrt{x} + x^2 \cos^2(x)}\) is integrable on \((0,1]\) and
+    \[\forall x \in (0,1], f(x) \leqslant \frac{1}{\sqrt{x}}.\]
+    Let \(0 \lt a \lt b \leqslant 1\), we have
+    \[\int_{[a,b]} f \leqslant \int_{[a,b]} \frac{\mathrm{d}x}{x} \leqslant 2.\]
+    So the function \(f\) is integrable on \((0,1]\) and
+    \[\int_{(0,1]} f \leqslant 2.\]
+    However, a priori, we are not able to calculate \(\int_{(a,b]} f\).</li>
   </ul>
+</div>
+
+<h3 class="section">II Properties</h3>
+
+<div class="box theorem">
+  <p><span class="emph thm">Theorem</span>
+  Let \(f,g \in C_m^0(I,\mathbb{R})\).</p>
+  <ol>
+    <li>If \(f\) and \(g\) are integrable on \(I\), then for each \(\lambda \geqslant 0\) and each
+    \(\mu \geqslant 0\), \(\lambda f + \mu g\) is also integrable on \(I\) and
+    \[\int_I \lambda f + \mu g = \lambda \int_I f + \mu \int_I g.\]</li>
+    <li>If \(f \leqslant g\) and if \(g\) is integrable on \(I\), then \(f\) is also integrable
+    on I and \[\int_I f \leqslant \int_I g.\]</li>
+  </ol>
+</div>
+
+<div class="txt">
+  <span class="emph">Proof</span>
+  <ol>
+    <li>Clear since it's the integral on a segment.</li>
+    <li>combination of linearity and increment of the integral
+    on a segment and property of supremum.</li>
+  </ol>
+</div>
+
+<div class="box definition">
+  <p><span class="emph def">Definition</span>
+  A sequence \(J_n\) is called an
+  <span class="emph def">exhaustive sequence (of segments) of \(I\)</span> if</p>
+  <ol>
+    <li>\(\forall n \in \mathbb{N}, J_n \in S(I).\)</li>
+    <li>\(\forall n \in \mathbb{N}, J_n \subset J_{n + 1}.\)</li>
+    <li>\(\bigcup_{n \in \mathbb{N}} J_n = I.\)</li>
+  </ol>
+  <p>The set consisting of all exhaustive sequences of I is written as \(S_e(I)\).</p>
+</div>
+
+<div class="box theorem">
+  <p><span class="emph thm">Proposition</span>
+  \[S_e(I) \not = \emptyset.\]</p>
+</div>
+
+<div class="box theorem">
+  <p><span class="emph thm">Theorem</span>
+  Let \(f\) be a positive, continuous almost everywhere function on \(I\).
+  The following statements are equivalents:</p>
+  <ol>
+    <li>The function \(f\) is integrable on \(I\).</li>
+    <li>There exists a sequence \(J_n \in S_e(I)\) such that
+    \((\int_{J_n} f)_{n \in \mathbb{N}}\) converge.</li>
+    <li>For each sequence \(J_n \in S_e(I)\),
+    \((\int_{J_n} f)_{n \in \mathbb{N}}\) converge.</li>
+  </ol>
+  <p>In this case, the limit of \((\int_{J_n} f)\) does not depend on \((J_n)\) and
+  \[\lim_{n \to +\infty} \int_{J_n} f = \int_I f.\]</p>
+</div>
+
+<div class="txt">
+  <span class="emph">Recall</span>
+  <ul>
+    <li>The function \(f \in C_m^0([a,b])\) if there exists \(a = a_0 \lt a_1 \lt \cdots \lt a_n = b\)
+    such that \(f_{|(a_i,a_{i+1})}\) is continuous
+    and can be extended to a continuous function on\([a_i, a_{i+1}]\).</li>
+    <li>The function \(f \in C_m^0(I)\)
+    if \(f\) is continuous almost everywhere on each \([a,b] \subset I\)</li>
+  </ul>
+</div>
+
+<div class="txt">
+  <span class="emph">Proof</span>
+  <dl>
+    <dt>1. \(\implies\) 3.</dt>
+    <dd><p>Let \((J_n) \in S_e(I)\), then \((u_n) = (\int_{J_n} f)_{n \in \mathbb{N}}\) is increasing
+    (since \(f \geqslant 0\) and \((J_n)\) is increasing from the perspective of inclusion).</p>
+    <p>Yet \(f\) is integrable on \(I\), so
+    \[\forall n \in \mathbb{N}, u_n \leqslant \int_I f = \sup_{J \in S(I)} \int_J f.\]
+    Therefore, \((u_n)\) is bounded from above by \(\int_I f\).</p>
+    <p>Hence, \((u_n)\) is increasing, bounded from above and so convergent, and
+    \[\lim_{n \to +\infty} \leqslant \int_I f.\]</p>
+    </dd>
+    <dt>3. \(\implies\) 2.</dt>
+    <dd>OK since \(S_e(I) \not = \emptyset\).</dd>
+    <dt>2. \(\implies\) 1.</dt>
+    <dd><p>Suppose that there exists an sequence \((K_n) \in S_e(I)\)
+    such that \(\int_{K_n} f\) converge.</p>
+    <p>Let \([a,b] \in S(I)\). Since \(a \in I = \bigcup_{n \in \mathbb{N}} K_n\),
+    there exists \(n_1 \in \mathbb{N}\) such that \(a \in K_{n_1}\). For the same
+    reason, there exists \(n_2 \in \mathbb{N}\) such that \(b \in K_{n_2}\).</p>
+    <p>Let \(n_0 = \max \{n_1, n_2\}\). As \(a \in K_{n_0}\) and \(b \in K_{n_0}\),
+    we have \[[a,b] \in K_{n_0}\] because \(K_{n_0}\) is an interval.</p>
+    <p>Therefore, \[\forall n \geqslant n_0, [a,b] \in K_n.\]
+    Hence, \[\forall n \geqslant n_0, \int_{[a,b]} f \leqslant \int_{K_n} f\]
+    since \(f \geqslant 0\).</p>
+    <p>Yet \((\int_{K_n} f)_{n \in \mathbb{N}}\) converge,
+    so \[\int_{[a,b] f} \leqslant (\lim_{n \to +\infty}) \int_{K_n} f.\]
+    As a result, \(f\) is integrable on \(I\) and
+    \[\int_I f = \sup_{[a,b] \in I} \int_{[a,b]}
+    f \leqslant \lim_{n \to +\infty} \int_{K_n} f.\]
+    In addition, if one of these propositions is satisfied, then
+    for \((J_n \in S_e(I))\):
+      <dl>
+        <dt>According to 1. \(\implies\) 3.</dt>
+        <dd>\[\lim_{n \to +\infty} \int_{J_n} f \leqslant \int_I f.\]</dd>
+        <dt>According to 2. \(\implies\) 1.</dt>
+        <dd>\[\int_I f \leqslant \lim_{n \to +\infty} \int_{J_n} f.\]</dd>
+      </dl>
+    </p>
+    </dd>
+  </dl>
 </div>
 </body>
 </html>

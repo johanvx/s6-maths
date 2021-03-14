@@ -1,48 +1,56 @@
 div {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 table {
-    border-spacing: 1.5em 1ex;
+  border-spacing: 1.5em 1ex;
 }
 
 .box {
-    border-style: solid;
-    border-width: .2em;
-    border-radius: 1em;
-    margin-left: 10em;
-    margin-right: 10em;
-    padding: 1em;
+  border-style: solid;
+  border-width: .2em;
+  border-radius: 1em;
+  margin-left: 5em;
+  margin-right: 5em;
+  padding: 1em;
+}
+
+.def {
+    color: salmon;
 }
 
 .definition {
-    background-color: lightpink;
+  border-color: salmon;
 }
 
 .emph {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .list {
-    display: inline-table;
+  display: inline-table;
 }
 
 .section {
-    font-weight: normal;
-    font-style: italic;
-    font-size: x-large;
+  font-weight: normal;
+  font-style: italic;
+  font-size: x-large;
 }
 
-.text {
-    margin-left: 2em;
-    text-align: left;
+.txt {
+  margin-left: 2em;
+  text-align: left;
+}
+
+.thm {
+    color: royalblue;
 }
 
 .theorem {
-    background-color: lightblue;
+  border-color: royalblue;
 }
