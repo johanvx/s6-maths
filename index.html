@@ -63,45 +63,58 @@
   <span class="emph">Remarks and Notations</span>
   <ul>
     <li>The set consisting of all segments in \(I\) is written as \(S(I)\).</li>
-    <li>The function \(f\) is integrable on \(I\) if:
-    \[\exists M \geqslant 0, \forall J \in S(I), \int_J f \leqslant M.\]</li>
-    <li>Theoretically, it is necessary to distinguish
-    \[\begin{aligned}
+    <li>
+      The function \(f\) is integrable on \(I\) if:
+      \[\exists M \geqslant 0, \forall J \in S(I), \int_J f \leqslant M.\]
+    </li>
+    <li>Theoretically, it is necessary to distinguish</li>
+    <p>\[\begin{aligned}
     \mathop{\int_0^{+\infty} f} \limits_{\textrm{convergence of the integral}}
     & \textrm{and}
     & \mathop{\int_0^{+\infty}f} \limits_{\textrm{integrability of }f} \\
     \mathop{\sum_{n=0}^{+\infty} u_n} \limits_{\textrm{convergence of the series}}
     & \textrm{and}
     & \mathop{\sum_{n \in \mathbb{N}} u_n} \limits_{\textrm{summability (absolute convergence)}}
-    \end{aligned}\]</li>
-    <li>If \(I = [\alpha,\beta]\) is a segment (\(\alpha \lt \beta\)),
-    then \(f\) is always integrable on \(I\) (because it's continuous almost everywhere) and
-    \[\int_I f = \mathop{\underbrace{\int_\alpha^\beta f =
-    \int_{[\alpha,\beta]} f}} \limits_{\textrm{cf. S4}}.\]
-    <p>Indeed,
-      <ul>
-        <li>\(f\) is continuous almost everywhere on the segment \([\alpha,\beta]\), so \(f\)
+    \end{aligned}\]</p>
+    <li>
+      If \(I = [\alpha,\beta]\) is a segment (\(\alpha \lt \beta\)),
+      then \(f\) is always integrable on \(I\) (because it's continuous almost everywhere) and
+      \[\int_I f = \mathop{\underbrace{\int_\alpha^\beta f =
+      \int_{[\alpha,\beta]} f}} \limits_{\textrm{cf. S4}}.\]
+    </li>
+    <p>Indeed,</p>
+    <ul>
+      <li>
+        \(f\) is continuous almost everywhere on the segment \([\alpha,\beta]\), so \(f\)
         is bounded on \([\alpha,\beta]\).
-        \[\forall J \in S(I), \int_J f \leqslant ||f||_{\infty, I} \cdot l(J)
-        \leqslant ||f||_{\infty, I} \cdot (\beta - \alpha).\]
-        Therefore, \(f\) is integrable on \(I = [\alpha,\beta]\).</li>
-        <li>Let \(J \in S(I)\). Since \(f \geqslant 0\),
+      </li>
+      <p>\[\forall J \in S(I), \int_J f \leqslant ||f||_{\infty, I} \cdot l(J)
+      \leqslant ||f||_{\infty, I} \cdot (\beta - \alpha).\]
+      Therefore, \(f\) is integrable on \(I = [\alpha,\beta]\).</p>
+      <li>
+        Let \(J \in S(I)\). Since \(f \geqslant 0\),
         \[\int_J f \leqslant \int_{[\alpha,\beta]} f\]
-        So \[\sup_{J \in S(I)} \int_J f \leqslant \int_{[\alpha,\beta]} f.\]</li>
-        <li>Finally, Since \(I = [\alpha,\beta] \in S(I)\),
-        \[\int_{[\alpha,\beta]} f \leqslant \sup_{J \in S(I)} \int_J f.\]</li>
-      </ul>
-    In conclusion, \[\int_I f = \int_{[\alpha,\beta]} f\].</p></li>
+        So \[\sup_{J \in S(I)} \int_J f \leqslant \int_{[\alpha,\beta]} f.\]
+      </li>
+      <li>
+        Finally, Since \(I = [\alpha,\beta] \in S(I)\),
+        \[\int_{[\alpha,\beta]} f \leqslant \sup_{J \in S(I)} \int_J f.\]
+      </li>
+    </ul>
+    <p>In conclusion, \[\int_I f = \int_{[\alpha,\beta]} f\].</p>
   </ul>
 </div>
 <div class="txt">
   <span class="emph">Examples</span>
   <ul>
-    <li>\(\displaystyle \int_{(0,1]} \frac{\mathrm{d} x}{\sqrt{x}} = ?\)
+    <li>
+      <p>\(\displaystyle \int_{(0,1]} \frac{\mathrm{d} x}{\sqrt{x}} = ?\)</p>
       <p>The function \(x \mapsto \dfrac{1}{\sqrt{x}}\) is integrable on \((0,1]\).</p>
       <ul>
-        <li><spaan class="emph">Theoretically: </spaan>
-        Let \([a,b] \subset (0,1]\), we have
+        <li>
+         <span class="emph">Theoretically: </span>
+        </li>
+        <p>Let \([a,b] \subset (0,1]\), we have
         \[\begin{aligned}
         \int_{[a,b]}\frac{\mathrm{d} x}{\sqrt{x}}
         & = 2(\sqrt{b} - \sqrt{a}) \\
@@ -115,11 +128,13 @@
         \[\int_{[\frac{1}{n}, 1]} \frac{\mathrm{d} x}{x} \leqslant \int_{(0,1]} \frac{\mathrm{d} x}{x}.\]
         i.e.
         \[2 - \frac{2}{\sqrt{n}} \leqslant \int_{(0,1]} \frac{\mathrm{d} x}{x}.\]
-        Yet each term have a (finite) limit when \(n \to +\infty\), so
-        \[2 \leqslant \int_{(0,1]} \frac{\mathrm{d} x}{x}.\]</li>
-        <li><p><span class="emph">Practically: </span>
-        \[\int_a^1 \frac{\mathrm{d} x}{x} = \bigg[2 \sqrt{x}\bigg]
-        \bigg|_a^1 \mathop{\to} \limits_{a \to 0} 2.\]</p></li>
+        Yet each term has a (finite) limit when \(n \to \infty\), so
+        \[2 \leqslant \int_{(0,1]} \frac{\mathrm{d} x}{x}.\]</p>
+        <li>
+          <span class="emph">Practically: </span>
+        </li>
+        <p>\[\int_a^1 \frac{\mathrm{d} x}{x} = \bigg[2 \sqrt{x}\bigg]
+        \bigg|_a^1 \mathop{\to} \limits_{a \to 0} 2.\]</p>
       </ul>
     </li>
 
@@ -128,13 +143,15 @@
     \(x \to \dfrac{1}{\sqrt{x}}\) and the fundamental theorem of calculus.</p>
     <p>In practice, it would never be the case!</p>
 
-    <li>The function \(x \mapsto \dfrac{e^{-x^2 \sin(x)}}{\sqrt{x} + x^2 \cos^2(x)}\) is integrable on \((0,1]\) and
-    \[\forall x \in (0,1], f(x) \leqslant \frac{1}{\sqrt{x}}.\]
-    Let \(0 \lt a \lt b \leqslant 1\), we have
+    <li>
+      The function \(x \mapsto \dfrac{e^{-x^2 \sin(x)}}{\sqrt{x} + x^2 \cos^2(x)}\) is integrable on \((0,1]\) and
+      \[\forall x \in (0,1], f(x) \leqslant \frac{1}{\sqrt{x}}.\]
+    </li>
+    <p>Let \(0 \lt a \lt b \leqslant 1\), we have
     \[\int_{[a,b]} f \leqslant \int_{[a,b]} \frac{\mathrm{d}x}{x} \leqslant 2.\]
     So the function \(f\) is integrable on \((0,1]\) and
     \[\int_{(0,1]} f \leqslant 2.\]
-    However, a priori, we are not able to calculate \(\int_{(a,b]} f\).</li>
+    However, a priori, we are not able to calculate \(\int_{(a,b]} f\).</p>
   </ul>
 </div>
 
@@ -144,11 +161,15 @@
   <p><span class="emph thm">Theorem</span>
   Let \(f,g \in C_m^0(I,\mathbb{R})\).</p>
   <ol>
-    <li>If \(f\) and \(g\) are integrable on \(I\), then for each \(\lambda \geqslant 0\) and each
-    \(\mu \geqslant 0\), \(\lambda f + \mu g\) is also integrable on \(I\) and
-    \[\int_I \lambda f + \mu g = \lambda \int_I f + \mu \int_I g.\]</li>
-    <li>If \(f \leqslant g\) and if \(g\) is integrable on \(I\), then \(f\) is also integrable
-    on I and \[\int_I f \leqslant \int_I g.\]</li>
+    <li>
+      If \(f\) and \(g\) are integrable on \(I\), then for each \(\lambda \geqslant 0\) and each
+      \(\mu \geqslant 0\), \(\lambda f + \mu g\) is also integrable on \(I\) and
+      \[\int_I \lambda f + \mu g = \lambda \int_I f + \mu \int_I g.\]
+    </li>
+    <li>
+      If \(f \leqslant g\) and if \(g\) is integrable on \(I\), then \(f\) is also integrable
+      on I and \[\int_I f \leqslant \int_I g.\]
+    </li>
   </ol>
 </div>
 
@@ -156,8 +177,7 @@
   <span class="emph">Proof</span>
   <ol>
     <li>Clear since it's the integral on a segment.</li>
-    <li>combination of linearity and increment of the integral
-    on a segment and property of supremum.</li>
+    <li>By linearity, inequalities between functions and the l.u.b (least-upper-bound) property.</li>
   </ol>
 </div>
 
@@ -181,16 +201,16 @@
 <div class="box theorem">
   <p><span class="emph thm">Theorem</span>
   Let \(f\) be a positive, continuous almost everywhere function on \(I\).
-  The following statements are equivalents:</p>
+  The following statements are equivalent:</p>
   <ol>
     <li>The function \(f\) is integrable on \(I\).</li>
     <li>There exists a sequence \(J_n \in S_e(I)\) such that
-    \((\int_{J_n} f)_{n \in \mathbb{N}}\) converge.</li>
+    \((\int_{J_n} f)_{n \in \mathbb{N}}\) converges.</li>
     <li>For each sequence \(J_n \in S_e(I)\),
-    \((\int_{J_n} f)_{n \in \mathbb{N}}\) converge.</li>
+    \((\int_{J_n} f)_{n \in \mathbb{N}}\) converges.</li>
   </ol>
   <p>In this case, the limit of \((\int_{J_n} f)\) does not depend on \((J_n)\) and
-  \[\lim_{n \to +\infty} \int_{J_n} f = \int_I f.\]</p>
+  \[\lim_{n \to \infty} \int_{J_n} f = \int_I f.\]</p>
 </div>
 
 <div class="txt">
@@ -208,43 +228,140 @@
   <span class="emph">Proof</span>
   <dl>
     <dt>1. \(\implies\) 3.</dt>
-    <dd><p>Let \((J_n) \in S_e(I)\), then \((u_n) = (\int_{J_n} f)_{n \in \mathbb{N}}\) is increasing
-    (since \(f \geqslant 0\) and \((J_n)\) is increasing from the perspective of inclusion).</p>
-    <p>Yet \(f\) is integrable on \(I\), so
-    \[\forall n \in \mathbb{N}, u_n \leqslant \int_I f = \sup_{J \in S(I)} \int_J f.\]
-    Therefore, \((u_n)\) is bounded from above by \(\int_I f\).</p>
-    <p>Hence, \((u_n)\) is increasing, bounded from above and so convergent, and
-    \[\lim_{n \to +\infty} \leqslant \int_I f.\]</p>
+    <dd>
+      <p>Let \((J_n) \in S_e(I)\), then \((u_n) = (\int_{J_n} f)_{n \in \mathbb{N}}\) is increasing
+      (since \(f \geqslant 0\) and \((J_n)\) is increasing from the perspective of inclusion).</p>
+      <p>Yet \(f\) is integrable on \(I\), so
+      \[\forall n \in \mathbb{N}, u_n \leqslant \int_I f = \sup_{J \in S(I)} \int_J f.\]
+      Therefore, \((u_n)\) is bounded from above by \(\int_I f\).</p>
+      <p>Hence, \((u_n)\) is increasing, bounded from above and so convergent, and
+      \[\lim_{n \to \infty} \leqslant \int_I f.\]</p>
     </dd>
     <dt>3. \(\implies\) 2.</dt>
     <dd>OK since \(S_e(I) \not = \emptyset\).</dd>
     <dt>2. \(\implies\) 1.</dt>
-    <dd><p>Suppose that there exists an sequence \((K_n) \in S_e(I)\)
-    such that \(\int_{K_n} f\) converge.</p>
-    <p>Let \([a,b] \in S(I)\). Since \(a \in I = \bigcup_{n \in \mathbb{N}} K_n\),
-    there exists \(n_1 \in \mathbb{N}\) such that \(a \in K_{n_1}\). For the same
-    reason, there exists \(n_2 \in \mathbb{N}\) such that \(b \in K_{n_2}\).</p>
-    <p>Let \(n_0 = \max \{n_1, n_2\}\). As \(a \in K_{n_0}\) and \(b \in K_{n_0}\),
-    we have \[[a,b] \in K_{n_0}\] because \(K_{n_0}\) is an interval.</p>
-    <p>Therefore, \[\forall n \geqslant n_0, [a,b] \in K_n.\]
-    Hence, \[\forall n \geqslant n_0, \int_{[a,b]} f \leqslant \int_{K_n} f\]
-    since \(f \geqslant 0\).</p>
-    <p>Yet \((\int_{K_n} f)_{n \in \mathbb{N}}\) converge,
-    so \[\int_{[a,b] f} \leqslant \lim_{n \to +\infty} (\int_{K_n} f).\]
-    As a result, \(f\) is integrable on \(I\) and
-    \[\int_I f = \sup_{[a,b] \in I} \int_{[a,b]}
-    f \leqslant \lim_{n \to +\infty} \int_{K_n} f.\]
-    In addition, if one of these propositions is satisfied, then
-    for \((J_n \in S_e(I))\):
+    <dd>
+      <p>Suppose that there exists an sequence \((K_n) \in S_e(I)\)
+      such that \(\int_{K_n} f\) converges.</p>
+      <p>Let \([a,b] \in S(I)\). Since \(a \in I = \bigcup_{n \in \mathbb{N}} K_n\),
+      there exists \(n_1 \in \mathbb{N}\) such that \(a \in K_{n_1}\). Likewise,
+      there exists \(n_2 \in \mathbb{N}\) such that \(b \in K_{n_2}\).</p>
+      <p>Let \(n_0 = \max \{n_1, n_2\}\). As \(a \in K_{n_0}\) and \(b \in K_{n_0}\),
+      we have \[[a,b] \in K_{n_0}\] because \(K_{n_0}\) is an interval.</p>
+      <p>Therefore, \[\forall n \geqslant n_0, [a,b] \in K_n.\]
+      Hence, \[\forall n \geqslant n_0, \int_{[a,b]} f \leqslant \int_{K_n} f\]
+      since \(f \geqslant 0\).</p>
+      <p>Yet \((\int_{K_n} f)_{n \in \mathbb{N}}\) converges,
+      so \[\int_{[a,b] f} \leqslant \lim_{n \to \infty} (\int_{K_n} f).\]
+      As a result, \(f\) is integrable on \(I\) and
+      \[\int_I f = \sup_{[a,b] \in I} \int_{[a,b]}
+      f \leqslant \lim_{n \to \infty} \int_{K_n} f.\]
+      In addition, if one of these propositions is satisfied, then
+      for \((J_n \in S_e(I))\):</p>
       <dl>
         <dt>According to 1. \(\implies\) 3.</dt>
-        <dd>\[\lim_{n \to +\infty} \int_{J_n} f \leqslant \int_I f.\]</dd>
+        <dd>\[\lim_{n \to \infty} \int_{J_n} f \leqslant \int_I f.\]</dd>
         <dt>According to 2. \(\implies\) 1.</dt>
-        <dd>\[\int_I f \leqslant \lim_{n \to +\infty} \int_{J_n} f.\]</dd>
+        <dd>\[\int_I f \leqslant \lim_{n \to \infty} \int_{J_n} f.\]</dd>
       </dl>
-    </p>
     </dd>
   </dl>
 </div>
+
+<div class="box theorem">
+  <p><span class="emph thm">Proposition</span>
+  Let \(f \in C_m^0(I,\mathbb{R}^+)\) (or \(f \in C_m^0 (I,\mathbb{K})\)).
+  Let \(c \in I\) and suppose \(I_1 = I \cap (-\infty,c]\) and \(I_2 = I \cap [c,+\infty)\).</p>
+  <p>The function \(f\) is integrable on \(I\) <span class="emph thm">if and only if</span> \(f\) is integrable on \(I_1\) and \(I_2\).</p>
+  <p>In this case, \[\int_I f = \int_{I_1} f + \int_{I_2} f.\]</p>
+</div>
+
+<div class="txt">
+  <span class="emph">Proof</span>
+  <ul>
+    <li>If \(f\) is integrable on \(I\):</li>
+    <p>Let \((J_n) \in S_e(I_1)\) and \((K_n) \in S_e(I_2)\).
+    \[\forall n \in \mathbb{N}, J_n \in S_e(I)\]
+    Hence, 
+    \[\forall n \in \mathbb{N}, \int_{J_n} f \leqslant \int_I f.\]</p>
+    <p>Yet \((\int_{J_n} f)\) is increasing.</p>
+    <p>As a result, \((\int_{J_n} f)\) converges, i.e. \(f\) is integrable on \(I_1\).</p>
+    <p>Likewise, \(f\) is integrable on \(I_2\).</p>
+    <p>In addition, for \(n \in \mathbb{N}\), by noting \(J_n = [a_n,b_n]\) and \(K_n = [\alpha_n,\beta_n]\)
+    where \(a_n \leqslant b_n \leqslant c \leqslant \alpha_n \leqslant \beta_n\), we have
+    \[\int_{J_n} f + \int_{K_n} f \leqslant \int_{[a_n,\beta_n]} \leqslant \int_I f.\]</p>
+    <p>Yet each term has a finite limit when \(n \to \infty\), so
+    \[\lim_{n \to \infty} \int_{J_n} f + \lim_{n \to \infty} \int_{K_n} f \leqslant \int_I f.\]
+    i.e. \[\int_{I_1} f + \int_{I_2} \leqslant \int_I f.\]</p>
+    <li>Reciprocally, if \(f\) is integrable on \(I_1\) and \(I_2\):</li>
+    <p>Let \((J_n) \in S_e(I)\). For \(n \in \mathbb{N}\), let \(K_n = J_n \cap (-\infty,c]\) and
+    \(L_n = J_n \cap [c,+\infty)\). Hence,
+    \[(K_n) \in S_e(I_1) \quad \textrm{and} \quad (L_n) \in S_e(I_2).\]
+    Yet for \(n \in \mathbb{N}\), \[\begin{aligned}\int_{J_n} f & = \int_{K_n} f + \int_{L_n} f \\
+    & \leqslant \int_{I_1} f + \int_{I_2} f \end{aligned}\]
+    Therefore, \((\int_{J_N} f)\) is bounded from above and so convergent
+    for \((\int_{J_N} f)\) is increasing.</p>
+    <p>As a result, \[\int_I f \leqslant \int_{I_1} f + \int_{I_2 f.}\]</p>
+  </ul>
+</div>
+
+<h3 class="section">III Link with convergence of integrals</h3>
+
+<h4>a) Recall</h4>
+
+<div class="box definition">
+  <p><span class="emph def">Definition</span>
+  Let \(f \in C_m^0 ([a,b), \mathbb{K})\) where \(b \in \mathbb{R} \cup \{+\infty\}\).
+  \(\int_a^b f(x) \mathrm{d} x\) <span class="emph def">converges</span> if the function
+  \(x \mapsto \int_{[a,x]} f\) has a finite limit on \(b\).</p>
+  <p>Then \[\int_a^b f := \lim_{\substack{x \to b \\ x \lt b}} \int_{[a,x]} f.\]</p>
+</div>
+
+<div class="txt">
+  <p><span class="emph">Remark</span>
+  Likewise, for \(f \in C_m^0((a,b], \mathbb{K})\), the function \(x \mapsto \int_{[x,b]} f\) is studied.</p>
+</div>
+
+<div class="box theorem">
+  <p><span class="emph thm">Theorem</span>
+  Let \(f \in C_m^0((a,b), \mathbb{K})\). The following statements are equivalent:</p>
+  <ol>
+    <li>There exists \(c \in (a,b)\) such that \(\int_a^c f\) converges and \(\int_a^c f\) converges.</li>
+    <li>For each \(c \in (a,b)\), \(int_a^c f\) converges and \(\int_c^b f\) converges.</li>
+  </ol>
+  <p>When one of these two propositions is true, \(\int_a^b f\) <span class="emph thm">converges</span>
+  and the value \(\int_a^c f + \int_c^b\) does not depend on \(c\). The value is called \(\int_a^b f\).</p>
+  <p>By definition, \(\int_a^b f\) converges if one of the two conditions above is satisfied.</p>
+</div>
+
+<div class="box theorem">
+  <p><span class="emph thm">Proposition</span>
+  Let \(f, g \in C_m^0(I)\). If \(\int_I f\) and \(\int_I g\) converge,
+  then for each \((\lambda,\mu) \in \mathbb{K}^2\), \(\int_I (\lambda f + \mu g)\) converge and
+  \[\int_I (\lambda f + \mu g) = \lambda \int_I f + \mu \int_I g.\]</p>
+</div>
+
+<h4>b) Link with integrability</h4>
+
+<div class="box theorem">
+  <p><span class="emph thm">Theorem</span>
+  Let \(f\) be a positive, continuous almost everywhere function on \(I\), then \(f\) is integrable on \(I\)
+  <span class="emph thm">if and only if</span> \(\int_I f\) converges.</p>
+  <p>In this case, by noting \(I = ?a,b?\), \[\int_I f = \int_a^b f(x) \mathrm{d} x.\]</p>
+</div>
+
+<div class="txt">
+  <p><span class="emph">Proof (The case \(I = [a,b)\))</span>
+  Let \(F: x \mapsto \int_{[a,x]} f\), then \(F\) is increasing since \(f \geqslant 0\).
+  \[\int_a^b f(x) \mathrm{d}x \iff F \textrm{ has a finite limit on } b.
+  \iff F \textrm{ is bounded from above on } I. \iff f \textrm{ is integrable on } I.\]
+  In this case, according to the monotone convergence theorem,
+  \[\int_a^b f(x) \mathrm{d} x = \lim_{x \to b^-} F(x) = \sup_{x \in [a,b)} F(x)
+  = \sup_{x \in [a,b)} \int_{[a,x]} f = \sup_{J \in S_e(I)} \int_J f = \int_I f.\]</p>
+</div>
+
+<h3 class="section">IV Rules of comparison and integration of relations</h3>
+TODO
+
 </body>
 </html>
