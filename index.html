@@ -367,8 +367,40 @@
   Let \(f, g\) be two positive, continuous almost everywhere functions on \(I\),
   where \(I = [a,b)\) or \(I = (a,b]\).</p>
   <ol>
-    <li>Suppose that ...</li>
+    <li>Suppose that \(f(x) \underset{x \to b}{=} o\big(g(x)\big)\).</li>
+    <P><span class="emph">(a)</span>
+    If \(g\) is integrable on \([a,b)\), then \(f\) is integrable on \([a,b)\).</P>
+    <p>In addition, we have \[\int_x^b f(t) \mathrm{d} t
+    \underset{x \to b}{=} o\bigg(\int_x^b g(t) \mathrm{d} t\bigg).\]</p>
+    <p><span class="emph">(b)</span>
+    If \(g\) is not integrable on \([a,b)\), then it is not certain whether
+    \(f\) is integrable ou not, yet
+    \[\int_a^x f(t) \mathrm{d} t \underset{x \to b}{=} o\bigg(\int_a^x g(t) \mathrm{d} t\bigg).\]</p>
+    <li>Suppose that \(f(x) \underset{x \to b}{=} O\big(g(x)\big)\).</li>
+    <P><span class="emph">(a)</span>
+    If \(g\) is integrable on \([a,b)\), then \(f\) is integrable on \([a,b)\).</P>
+    <p>In addition, we have \[\int_x^b f(t) \mathrm{d} t
+    \underset{x \to b}{=} O\bigg(\int_x^b g(t) \mathrm{d} t\bigg).\]</p>
+    <p><span class="emph">(b)</span>
+    If \(g\) is not integrable on \([a,b)\), then it is not certain whether
+    \(f\) is integrable ou not, yet
+    \[\int_a^x f(t) \mathrm{d} t \underset{x \to b}{=} O\bigg(\int_a^x g(t) \mathrm{d} t\bigg).\]</p>
+    <li>Suppose that \(f \underset{b}{\sim} g\).</li>
+    <p>\(f\) is integrable on \([a,b)\) <span class="emph thm">if and only if</span>
+    \(g\) is integrable on \([a,b)\).</p>
+    <p>In addition,</p>
+    <ul>
+      <li>if \(g\) is integrable, then \[\int_x^b f(t) \mathrm{d} t
+      \underset{x \to b}{\sim} \int_x^b g(t) \mathrm{d} t.\]</li>
+      <li>if \(g\) is not integrable, then \[\int_a^x f(t) \mathrm{d} t
+      \underset{x \to b}{\sim} \int_a^x g(t) \mathrm{d} t.\]</li>
+    </ul>
   </ol>
+</div>
+
+<div class="txt">
+  <p><span class="emph">Proof</span>
+  Not interesting.</p>
 </div>
 
 </body>
